@@ -12,3 +12,22 @@ semprix / gecko - Dax Labrador - core dev
 
 shipcod3 - Jay Turla - contributor
 
+Directory structure
+-------------------
+
+	[root]
+	| - auxiliary 
+    | - modules
+    |  `- recon
+    |  `- discovery
+    |  `- exploitation 
+    | - unittest
+    |  `- sockets             
+    |  `- strings
+    |
+    `- ftw.py (core)              
+	`- Changelog
+	`- ToDo
+	`- Readme
+
+
