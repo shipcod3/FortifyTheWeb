@@ -63,11 +63,11 @@ if sys.argv[2] == '80':
         s.connect((sys.argv[1], 80))
         print "[*] Using port 80 on target"
         print "[*] Checking if http port (80) on target is open"
-        print "\033[92m>> HTTP port on target is open\033[0m"
-        print "\033[92m>> Marking for http testing\033[0m"
+        print " \033[92m>> HTTP port on target is open\033[0m"
+        print " \033[92m>> Marking for http testing\033[0m"
         grabheader()
     except socket.error as e:
-        print "\033[91m>> Target seems to be down or port has been blocked\033[0m"
+        print " \033[91m>> Target seems to be down or port has been blocked\033[0m"
         s.close()
 
 
@@ -77,10 +77,10 @@ elif sys.argv[2] == '443':
         s.connect((sys.argv[1], 443))
         print "[*] Using port 443 on target"
         print "[*] Checking https port (443) on target is open"
-        print "\033[92m>> HTTPS port on target is open\033[0m"
-        print "\033[92m>> Marking for https testing\033[0m"
+        print " \033[92m>> HTTPS port on target is open\033[0m"
+        print " \033[92m>> Marking for https testing\033[0m"
     except socket.error as e:
-        print "\033[91m>> Target seems to be down or port has been blocked\033[0m"
+        print " \033[91m>> Target seems to be down or port has been blocked\033[0m"
         s.close()
 
 else:
