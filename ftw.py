@@ -3,6 +3,8 @@
 #
 #
 #
+#
+
 
 # Required Python libs
 
@@ -19,8 +21,15 @@ from termcolor import colored, cprint
 sys.path.append(r'auxiliary')
 from banner import *
 from timer import *
+from genrep import *
+
+# Load modules
+
+sys.path.append(r'modules')
+from grabheader import *
 
 # Check if target is within the argument
+
 if len(sys.argv) <= 2 :
   print
   exitbanner()
@@ -29,38 +38,45 @@ else:
 
 # Fortify the Web when ready
     startbanner()
+
+
+# Run stage 1 banner
     stage1()
 
 # Check host if alive
 
 if sys.argv[2] == '80':
-    print "[*] Checking for default http port (80)"
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to default HTTP port
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
     try:
         s.connect((sys.argv[1], 80))
-        cprint ('>> Target is up', 'green')
-        cprint ('>> Marking for http testing', 'green')
+        print "[*] Using port 80 on target"
+        print "[*] Checking if http port (80) on target is open"
+        print "\033[92m>> HTTP port on target is open\033[0m"
+        print "\033[92m>> Marking for http testing\033[0m"
+        grabheader()
     except socket.error as e:
-        cprint ('>> Target is down', 'red')
+        print "\033[91m>> Target seems to be down or port has been blocked\033[0m"
         s.close()
 
+
 elif sys.argv[2] == '443':
-    print "[*] Checking for default secure http port (443)"
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to default HTTP port
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
     try:
         s.connect((sys.argv[1], 443))
-        cprint ('>> Target is up', 'green')
-        cprint ('>> Marking for https testing', 'green')
+        print "[*] Using port 443 on target"
+        print "[*] Checking https port (443) on target is open"
+        print "\033[92m>> HTTPS port on target is open\033[0m"
+        print "\033[92m>> Marking for https testing\033[0m"
     except socket.error as e:
-        cprint ('>> Target is down', 'red')
+        print "\033[91m>> Target seems to be down or port has been blocked\033[0m"
         s.close()
 
 else:
-     cprint ('[-] Not a default HTTP port', 'red')
+     print "\033[91m[-] Target does not have a default HTTP port\033[0m"
      time.sleep(3) # Give a little time to sleep
 
 
- # Load modules for testing
+# Load modules for testing
 
 print "[*] Shutting down"
 timer()
