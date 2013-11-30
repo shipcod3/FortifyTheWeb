@@ -11,50 +11,23 @@ import subprocess
 import socket
 from termcolor import colored, cprint
 
+sys.path.append(r'auxiliary')
+from banner import *
+from colorful import has_colours, printout
 
-# Color definition fork from httphacker
-
-BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
-
-def has_colours(stream):
-    if not hasattr(stream, "isatty"):
-        return False
-    if not stream.isatty():
-        return False
-    try:
-        import curses
-        curses.setupterm()
-        return curses.tigetnum("colors") > 2
-    except:
-        return False
-has_colours = has_colours(sys.stdout)
-def printout(text, colour=WHITE):
-        if has_colours:
-                seq = "\x1b[1;%dm" % (30+colour) + text + "\x1b[0m"
-                sys.stdout.write(seq)
-        else:
-                sys.stdout.write(text)
 
 # Check if target is within the argument
 if len(sys.argv) < 2:
   print
-  printout('Please provide target!\n', RED)
-  printout('Usage: python ftw.py path\n', WHITE)
-  printout('Example: python ftw.py google.com\n\n', WHITE)
-  sys.exit()
+  exitbanner()
+
 else:
 
 # Fortify the Web when ready
-	print "*******************************"
-	print "FTW (Fortify The Web"
-	print "Fortify On Demand - HP Enterprise Security"
-	print "*******************************"
-	print "Setting Target:", sys.argv[1]
-	print "Fortifying the Web now!!!"
-	print "\n"
-	print "[*] Performing Stage 1 Recon"
-	#time.sleep(5)
-	print "[*] Checking for default http port"
+    startbanner()
+	
+# Check the default http port if we can connect	(80)
+print "[*] Checking for default http port (80)"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to default HTTP port
 try:
     s.connect((sys.argv[1], 80))
@@ -63,7 +36,9 @@ except socket.error as e:
     cprint ('>> Target is down', 'red')
 s.close()
 
-print "[*] Checking for secure http port"
+# Check the default secure port if we can connect (443)
+
+print "[*] Checking for default secure port (443)"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to secure (SSL) HTTP port
 try:
     s.connect((sys.argv[1], 443))
@@ -72,5 +47,5 @@ except socket.error as e:
     cprint ('>> Target is down', 'red')
 s.close()
 
-time.sleep(5)
+time.sleep(3) # Give the app a little sleep
 
