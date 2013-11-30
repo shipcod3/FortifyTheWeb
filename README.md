@@ -9,5 +9,6 @@ Contributors
 ----------------
 
 semprix / gecko - Dax Labrador - core dev
+
 shipcod3 - Jay Turla - contributor
 
