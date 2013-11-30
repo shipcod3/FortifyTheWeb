@@ -5,6 +5,7 @@
 #
 
 # Required Python libs
+
 import ping, socket
 import time
 import sys
@@ -13,9 +14,10 @@ import subprocess
 import socket
 from termcolor import colored, cprint
 
+# Load auxiliary
+
 sys.path.append(r'auxiliary')
 from banner import *
-
 
 # Check if target is within the argument
 if len(sys.argv) <= 2 :
@@ -59,3 +61,4 @@ else:
 
 
  # Load modules for testing
+
