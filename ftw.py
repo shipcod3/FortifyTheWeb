@@ -9,6 +9,8 @@ import sys
 import urllib2
 import subprocess
 import socket
+from termcolor import colored, cprint
+
 
 # Color definition fork from httphacker
 
@@ -43,16 +45,32 @@ if len(sys.argv) < 2:
 else:
 
 # Fortify the Web when ready
-	print "Target:", sys.argv[1]
-	print "Fortifying the Web"
-	print "\033[34m[*]\033[0m Performing Stage 1 Recon"
+	print "*******************************"
+	print "FTW (Fortify The Web"
+	print "Fortify On Demand - HP Enterprise Security"
+	print "*******************************"
+	print "Setting Target:", sys.argv[1]
+	print "Fortifying the Web now!!!"
+	print "\n"
+	print "[*] Performing Stage 1 Recon"
 	#time.sleep(5)
-
+	print "[*] Checking for default http port"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to default HTTP port
 try:
     s.connect((sys.argv[1], 80))
-    print "Target is up"
+    cprint ('>> Target is up', 'green')
 except socket.error as e:
-    print "Target seems to down"
+    cprint ('>> Target is down', 'red')
 s.close()
+
+print "[*] Checking for secure http port"
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Using socket to connect to secure (SSL) HTTP port
+try:
+    s.connect((sys.argv[1], 443))
+    cprint ('>> Target is up', 'green')
+except socket.error as e:
+    cprint ('>> Target is down', 'red')
+s.close()
+
+time.sleep(5)
 
