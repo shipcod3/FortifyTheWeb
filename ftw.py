@@ -18,6 +18,7 @@ from termcolor import colored, cprint
 
 sys.path.append(r'auxiliary')
 from banner import *
+from timer import *
 
 # Check if target is within the argument
 if len(sys.argv) <= 2 :
@@ -56,9 +57,10 @@ elif sys.argv[2] == '443':
 
 else:
      cprint ('[-] Not a default HTTP port', 'red')
-     cprint ('[*] Shutting down....', 'red')
      time.sleep(3) # Give a little time to sleep
 
 
  # Load modules for testing
 
+print "[*] Shutting down"
+timer()

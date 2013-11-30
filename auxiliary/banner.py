@@ -1,5 +1,7 @@
 import sys
 import time
+import socket
+import os
 
 sys.path.append(r'auxiliary')
 from colorful import *
@@ -23,6 +25,8 @@ def startbanner():
 	printout('ShadowLabs\n', BLUE)
 	printout('******************************************\n', BLUE)
 	print "Target:", sys.argv[1]
+	ip_add = socket.gethostbyaddr(sys.argv[1])
+	print "IP Address:", ip_add
 	print "Fortifying the Web now!!!"
 
 def stage1():
