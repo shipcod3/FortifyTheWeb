@@ -79,6 +79,7 @@ elif sys.argv[2] == '443':
         print "[*] Checking https port (443) on target is open"
         print " \033[92m>> HTTPS port on target is open\033[0m"
         print " \033[92m>> Marking for https testing\033[0m"
+        grabheader()
     except socket.error as e:
         print " \033[91m>> Target seems to be down or port has been blocked\033[0m"
         s.close()
