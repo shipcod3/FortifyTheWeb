@@ -12,6 +12,8 @@ semprix / gecko - Dax Labrador - core dev
 
 shipcod3 - Jay Turla - contributor
 
+httphacker - Nathan LaFollete - contributor
+
 Directory structure
 -------------------
 
