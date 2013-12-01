@@ -12,6 +12,8 @@ semprix / gecko - Dax Labrador - core dev
 
 shipcod3 - Jay Turla - contributor
 
+httphacker - Nathan LaFollete - contributor
+
 Directory structure
 -------------------
 
@@ -35,6 +37,7 @@ Directory structure
 Coding Standards
 -------------------
 Maven Convention - http://maven.apache.org/developers/conventions/code.html
+
 Python PEP - http://www.python.org/dev/peps/pep-0008/#code-lay-out
 
 
