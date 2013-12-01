@@ -1,4 +1,4 @@
-# ftw.py - Fortify The Web
+# Fortify The Web framework
 #
 # ______         _   _  __    _______ _       __          __  _     
 #|  ____|       | | (_)/ _|  |__   __| |      \ \        / / | |    
@@ -9,7 +9,7 @@
 #                           __/ |                                   
 #                          |___/       
 #
-# description:       FortifyTheWeb
+# description:       FortifyTheWeb Framework core
 # author:            @semprix, @shipcod3
 # platform:          Python
 # version:            0.1

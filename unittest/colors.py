@@ -1,5 +1,6 @@
-# Unified colors unittest for FTW framework
-# Author: @semprix
+# colors.py
+# description: unittest for unified color
+# author: @semprix
 
 OKBLUE = '\033[94m'		# Framework formatting
 OKGREEN = '\033[92m'	# Framework OK status

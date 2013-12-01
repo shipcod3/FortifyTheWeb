@@ -1,5 +1,6 @@
-# Banners for FTW framework
-# Author: @semprix
+# timer.py
+# description: for time stamping
+# author: @semprix
 
 from time import localtime, strftime
 

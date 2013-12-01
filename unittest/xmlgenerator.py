@@ -1,1 +1,3 @@
-# XML Generator unittest for FTW framework
+# xmlgenerator
+# description:xml generator to core stage 1
+# author: 

@@ -1,5 +1,6 @@
-# Socket unittest for FTW framework
-# Author: @semprix
+# sockettest.py
+# description: implementation of socket connection
+# author: @semprix
 
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

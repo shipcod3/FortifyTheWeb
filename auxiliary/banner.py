@@ -1,5 +1,6 @@
-# Banners for FTW framework
-# Author: @semprix
+# banner.py
+# description: banner used at core
+# author: @semprix
 
 import sys
 import time

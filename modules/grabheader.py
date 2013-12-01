@@ -1,5 +1,6 @@
-# Grab header for FTW framework
-# Author: @semprix
+# grabheader.py
+# description: header analysis for ftw core
+# author: @semprix
 
 import sys
 import urllib2

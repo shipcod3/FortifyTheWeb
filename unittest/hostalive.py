@@ -1,5 +1,6 @@
-# Host alive unittest for FTW framework
-# Author: @semprix
+# hostalive.py
+# description: check if host is alive, integrated to core stage 1
+# author: @semprix
 
 import subprocess
 import shlex
