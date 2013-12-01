@@ -1,3 +1,6 @@
+# Banners for FTW framework
+# Author: @semprix
+
 import sys
 import time
 import socket

@@ -1,3 +1,6 @@
+# Banners for FTW framework
+# Author: @semprix
+
 from time import localtime, strftime
 
 def timer():

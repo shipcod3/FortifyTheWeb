@@ -1,3 +1,6 @@
+# Socket unittest for FTW framework
+# Author: @semprix
+
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:

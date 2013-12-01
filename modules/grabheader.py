@@ -1,3 +1,6 @@
+# Grab header for FTW framework
+# Author: @semprix
+
 import sys
 import urllib2
 import time

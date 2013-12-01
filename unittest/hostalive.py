@@ -1,3 +1,6 @@
+# Host alive unittest for FTW framework
+# Author: @semprix
+
 import subprocess
 import shlex
 import sys

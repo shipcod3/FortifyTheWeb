@@ -1,0 +1,1 @@
+# XML Generator unittest for FTW framework
