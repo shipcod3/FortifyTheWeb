@@ -29,5 +29,14 @@ Directory structure
 	`- Changelog
 	`- ToDo
 	`- Readme
+	
+	
+
+Coding Standards
+-------------------
+Maven Convention - http://maven.apache.org/developers/conventions/code.html
+Python PEP - http://www.python.org/dev/peps/pep-0008/#code-lay-out
+
+
 
 
