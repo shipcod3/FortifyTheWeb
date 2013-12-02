@@ -9,6 +9,7 @@ import os
 
 sys.path.append(r'auxiliary')
 from timer import *
+from colors import *
 
 def startbanner():
 
@@ -29,9 +30,16 @@ def startbanner():
 	print ""
 
 	print "Target:", sys.argv[1]
-	ip_add = socket.gethostbyaddr(sys.argv[1])
-	print "IP Address:", ip_add
-	print "Fortifying the Web now!!!"
+	try:
+		reversedns = socket.gethostbyaddr(sys.argv[1])
+		print "IP Address:", ip_add
+		print "Fortifying the Web now!!!"
+	except socket.error as e:
+		printout (' >> Hostname lookup failed, application will now shutdown', RED)
+		time.sleep(3)
+		print "[*] Shutting down"
+		timer()
+		sys.exit()
 
 def stage1banner():
 	print "[Stage 1] Passive Reconnaissance"
