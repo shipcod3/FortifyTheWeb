@@ -53,7 +53,7 @@ else:
 
 
 # Run stage 1 banner
-    stage1()
+    stage1banner()
 
 # Check host if alive
 
