@@ -1,8 +1,28 @@
 # colors.py
-# description: unittest for unified color
-# author: @semprix
+# description: used for unified color coding
+# author: @httphacker
 
-OKBLUE = '\033[94m'		# Framework formatting
-OKGREEN = '\033[92m'	# Framework OK status
-WARNING = '\033[93m'	# Framework warning notification
-FAIL = '\033[91m'		# Framework exception
+import sys
+import string
+
+BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
+
+def has_colours(stream):
+    if not hasattr(stream, "isatty"):
+        return False
+    if not stream.isatty():
+        return False
+    try:
+        import curses
+        curses.setupterm()
+        return curses.tigetnum("colors") > 2
+    except:
+        return False
+has_colours = has_colours(sys.stdout)
+
+def printout(text, colour=WHITE):
+        if has_colours:
+                seq = "\x1b[1;%dm" % (30+colour) + text + "\x1b[0m"
+                sys.stdout.write(seq)
+        else:
+                sys.stdout.write(text)
