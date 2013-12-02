@@ -32,7 +32,7 @@ def startbanner():
 	print "Target:", sys.argv[1]
 	try:
 		reversedns = socket.gethostbyaddr(sys.argv[1])
-		print "IP Address:", ip_add
+		print "IP Address:", reversedns
 		print "Fortifying the Web now!!!"
 	except socket.error as e:
 		printout (' >> Hostname lookup failed, application will now shutdown', RED)
