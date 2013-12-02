@@ -33,7 +33,7 @@ def startbanner():
 	print "IP Address:", ip_add
 	print "Fortifying the Web now!!!"
 
-def stage1():
+def stage1banner():
 	print "[Stage 1] Passive Reconnaissance"
 	time.sleep(2)
 
