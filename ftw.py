@@ -37,7 +37,7 @@ from colors import *
 
 # Load modules
 
-sys.path.append(r'modules')
+sys.path.append(r'modules/recon')
 from grabheader import *
 
 # Check if target is within the argument
