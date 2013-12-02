@@ -33,7 +33,7 @@ from termcolor import colored, cprint
 sys.path.append(r'auxiliary')
 from banner import *
 from timer import *
-from genrep import *
+from colors import *
 
 # Load modules
 
@@ -63,11 +63,11 @@ if sys.argv[2] == '80':
         s.connect((sys.argv[1], 80))
         print "[*] Using port 80 on target"
         print "[*] Checking if http port (80) on target is open"
-        print " \033[92m>> HTTP port on target is open\033[0m"
-        print " \033[92m>> Marking for http testing\033[0m"
+        printout (' >> HTTP port on target is open', GREEN)
+        printout (' >> Marking for http testing', GREEN)
         grabheader()
     except socket.error as e:
-        print " \033[91m>> Target seems to be down or port has been blocked\033[0m"
+        printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
 
 
@@ -77,16 +77,16 @@ elif sys.argv[2] == '443':
         s.connect((sys.argv[1], 443))
         print "[*] Using port 443 on target"
         print "[*] Checking https port (443) on target is open"
-        print " \033[92m>> HTTPS port on target is open\033[0m"
-        print " \033[92m>> Marking for https testing\033[0m"
+        printout (' >> HTTPS port on target is open', GREEN)
+        printout (' >> Marking for https testing', GREEN)
         grabheader()
     except socket.error as e:
-        print " \033[91m>> Target seems to be down or port has been blocked\033[0m"
+        printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
 
 else:
-     print "\033[91m[-] Target does not have a default HTTP port\033[0m"
-     time.sleep(3) # Give a little time to sleep
+        printout (' >> Target does not have default http(s) port', RED)
+        time.sleep(3) # Give a little time to sleep
 
 
 # Load modules for testing
