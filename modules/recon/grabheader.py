@@ -9,7 +9,7 @@ import time
 from colors import *
 
 def grabheader():
-	print "[*] Performing header analysis"
+	print "[**] Starting header analysis"
 	response = urllib2.urlopen('http://' + sys.argv[1])
 
 	# Server header settings
@@ -38,6 +38,14 @@ def grabheader():
 	 # Server header security settings
 	
 	 # Check if this is an SSL port
+
+	if sys.argv[2] == '443':
+		print " [+] Grabbing SSL header settings "
+		printout('  >>  SSL Checks go here', WHITE)
+
+	else:
+		print "[!] Target not using SSL, proceed with http..."
+		time.sleep(3)
 
 	grabframeopt = response.info().getheader('x-frame-options')
 	print " [+] Grabbing x-frame-options "
