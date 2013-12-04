@@ -59,7 +59,7 @@ def exitbanner():
 	print""
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[94mFTW (Fortify The Web)\033[0m')
-	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3\033[0m')
+	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz\033[0m')
 	print(' \033[94mVersion: v1.0\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[91mPlease provide target!\033[0m')
