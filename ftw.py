@@ -39,6 +39,7 @@ from colors import *
 
 sys.path.append(r'modules/recon')
 from grabheader import *
+from urlcrawler import *
 
 # Check if target is within the argument
 
@@ -65,7 +66,11 @@ if sys.argv[2] == '80':
         print "[*] Checking if http port (80) on target is open"
         printout (' >> HTTP port on target is open', GREEN)
         printout (' >> Marking for http testing', GREEN)
+        print ""
         grabheader()
+        print ""
+        urlcrawler()
+        printout ('[*] Crawl finishing....', GREEN)
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -79,17 +84,21 @@ elif sys.argv[2] == '443':
         print "[*] Checking https port (443) on target is open"
         printout (' >> HTTPS port on target is open', GREEN)
         printout (' >> Marking for https testing', GREEN)
+        print ""
         grabheader()
+        urlcrawler()
+        printout ('[*] Crawl finishing....', GREEN)
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
 
 else:
-        printout (' >> Target does not have default http(s) port', RED)
+        printout (' [!] Target does not have default http(s) port', RED)
         time.sleep(3) # Give a little time to sleep
 
 
 # Load modules for testing
 
-print "[*] Shutting down"
+print "[*] Shutting down......"
+time.sleep(4)
 timer()
