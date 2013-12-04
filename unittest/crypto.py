@@ -1,4 +1,4 @@
 import hashlib
 
-hashtxt = hashlib.sha224("Nobody inspects the spammish repetition").hexdigest()
+hashtxt = hashlib.sha224("Who reads my hash").hexdigest()
 print hashtxt
