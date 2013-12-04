@@ -23,14 +23,14 @@ def urlcrawler():
 
     elif sys.argv[2] == '443':
     	print (' [+] Crawling HTTPS')
-    	req  = requests.get("http://" + sys.argv[1])
+    	req  = requests.get("https://" + sys.argv[1])
     	data = req.text
     	soup = BeautifulSoup(data)
     	for link in soup.find_all('a'):
        		print(link.get('href'))
 
     else:
-    	print ('error')
+        printout (' [!] Error performing crawl', RED)
 
 	
 	time.sleep(3)

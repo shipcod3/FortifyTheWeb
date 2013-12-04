@@ -86,6 +86,7 @@ elif sys.argv[2] == '443':
         printout (' >> Marking for https testing', GREEN)
         print ""
         grabheader()
+        print ""
         urlcrawler()
         printout ('[*] Crawl finishing....', GREEN)
     except socket.error as e:

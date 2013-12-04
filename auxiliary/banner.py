@@ -42,7 +42,7 @@ def startbanner():
 		sys.exit()
 
 def stage1banner():
-	print "[Stage 1] Passive Reconnaissance"
+	print "[Starting Stage 1] Passive Reconnaissance"
 	time.sleep(2)
 
 
