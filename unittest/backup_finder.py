@@ -6,7 +6,17 @@ import sys
 import httplib
 
 host = sys.argv[1]
-backup_files = ['wp-config.txt', 'wp-config.php~']
+backup_files = [
+		'wp-config.php-',
+		'wp-config.php.bak',
+                'wp-config.php.save',
+		'wp-config.php.swp',
+		'wp-config.php.swo',
+		'wp-config.php.conf',
+               	'wp-config.php.old',
+                'wp-config.txt', 
+                'wp-config.php~',
+               ]
 
 for backup_file in backup_files:
     conn = httplib.HTTPConnection(host)
