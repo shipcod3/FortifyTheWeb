@@ -7,15 +7,24 @@ import httplib
 
 host = sys.argv[1]
 backup_files = [
-		'wp-config.php-',
-		'wp-config.php.bak',
+                'wp-config.php-',
+                'wp-config.php.bak',
                 'wp-config.php.save',
-		'wp-config.php.swp',
-		'wp-config.php.swo',
-		'wp-config.php.conf',
-               	'wp-config.php.old',
+                'wp-config.php.swp',
+                'wp-config.php.swo',
+                'wp-config.php.conf',
+                'wp-config.php.old',
                 'wp-config.txt', 
                 'wp-config.php~',
+                'config.php-',
+                'config.php.bak',
+                'config.php.save',
+                'config.php.swp',
+                'config.php.swo',
+                'config.php.conf',
+                'config.php.old',
+                'config.txt',
+                'config.php~',
                ]
 
 for backup_file in backup_files:
