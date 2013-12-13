@@ -33,9 +33,13 @@ Directory structure
 	`- Changelog
 	`- ToDo
 	`- Readme
-	
-	
 
+Python Dependencies
+
+ping
+termcolor
+BeautifulSoup4
+	
 Coding Standards
 -------------------
 Maven Convention - http://maven.apache.org/developers/conventions/code.html
