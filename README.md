@@ -1,4 +1,4 @@
-Fortify-The-Web (FTW)
+FortifyTheWeb (FTW)
 =====================
 
 Description
