@@ -35,10 +35,11 @@ Directory structure
 	`- Readme
 
 Python Dependencies
-
+-------------------
 ping
 termcolor
 BeautifulSoup4
+	
 	
 Coding Standards
 -------------------
