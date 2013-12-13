@@ -37,7 +37,9 @@ Directory structure
 Python Dependencies
 -------------------
 ping
+
 termcolor
+
 BeautifulSoup4
 	
 	
