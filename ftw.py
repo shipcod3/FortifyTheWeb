@@ -20,7 +20,7 @@
 
 # Required Python libs
 
-import ping, socket
+import ping
 import time
 import sys
 import urllib2
