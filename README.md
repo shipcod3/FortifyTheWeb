@@ -36,11 +36,11 @@ Directory structure
 
 Python Dependencies
 -------------------
-ping
+ping - pure python ping implementation using raw sockets
 
-termcolor
+termcolor - ANSII Color formatting for output in terminal
 
-BeautifulSoup4
+BeautifulSoup4 - sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
 	
 	
 Coding Standards
