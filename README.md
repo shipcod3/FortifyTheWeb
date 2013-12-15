@@ -40,7 +40,7 @@ ping - pure python ping implementation using raw sockets (download link : https:
 
 termcolor - ANSII Color formatting for output in terminal (download link : https://pypi.python.org/pypi/termcolor/1.1.0)
 
-BeautifulSoup4 - sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree. 
+BeautifulSoup4 - sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree. (download link : https://pypi.python.org/pypi/beautifulsoup4/4.3.2)
 
 requests - Requests is an Apache2 Licensed HTTP library, written in Python. (download link : https://pypi.python.org/pypi/requests)
 	
