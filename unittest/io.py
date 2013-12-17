@@ -9,4 +9,6 @@ print ('Create me file and directory')
 if not os.path.exists(sys.argv[1]):
     os.makedirs(sys.argv[1])
     os.chdir(sys.argv[1])
-open(sys.argv[1] + '.txt', "w")
+f = open(sys.argv[1] + '.txt', 'w')
+print >> f, 'Filename:', sys.argv[1]  # or f.write('...\n')
+f.close()
