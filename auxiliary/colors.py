@@ -2,8 +2,7 @@
 # description: used for unified color coding
 # author: @httphacker
 
-import sys
-import string
+import sys, string
 
 BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
 

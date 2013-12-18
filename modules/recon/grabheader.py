@@ -2,9 +2,7 @@
 # description: header analysis for ftw core
 # author: @semprix
 
-import sys
-import urllib2
-import time
+import sys, urllib2, time
 
 from colors import *
 

@@ -2,10 +2,7 @@
 # description: banner used at core
 # author: @semprix
 
-import sys
-import time
-import socket
-import os
+import sys, time, socket, os
 
 sys.path.append(r'auxiliary')
 from timer import *

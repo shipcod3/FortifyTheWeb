@@ -2,10 +2,7 @@
 # description: crawls the URL
 # author: @shipcod3
 
-import sys
-import requests
-import time
-import os
+import sys, requests, time, os
 
 sys.path.append(r'auxiliary')
 from bs4 import BeautifulSoup 

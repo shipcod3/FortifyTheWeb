@@ -20,12 +20,8 @@
 
 # Required Python libs
 
-import ping
-import time
-import sys
-import urllib2
-import subprocess
-import socket
+import ping, time, sys, urllib2, subprocess, socket
+
 from termcolor import colored, cprint
 
 # Load auxiliary
