@@ -15,7 +15,7 @@ def grabheader():
 	grabserver = response.info().getheader('server')
 	print " [+] Grabbing web server version"
 	if grabserver is None:
-		printout('Failed to get header value *not vulnerable*', RED)
+		printout('  >> Failed to get header value *not vulnerable*', RED)
 	else:
 		printout('  >> ' + grabserver, GREEN)
 
@@ -63,7 +63,10 @@ def grabheader():
 	print " [+] Grabbing x-content-type-options"
 	if grabxcontent is None:
 		printout('  >> No x-content-type-options *vulnerability to MIME sniffing is possible*', RED)
- 	
+ 	else:
+		printout('  >> ' + grabxcontent, GREEN)
+
+
  	response.close()  
  	time.sleep(3)
 

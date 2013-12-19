@@ -12,7 +12,7 @@ def urlcrawler():
     print "[**] Starting Spider"
     time.sleep(3)
     if sys.argv[2] == '80':
-    	print (' [+] Crawling HTTP')
+    	print (' [+] Crawling unauthenticated HTTP')
         print ('    >> Checking if reports folder exist and writable')
         if not os.path.exists(sys.argv[1]):
             print ('        >> Creating reports folder')
@@ -27,7 +27,7 @@ def urlcrawler():
         f.close()
 
     elif sys.argv[2] == '443':
-    	print (' [+] Crawling HTTPS')
+    	print (' [+] Crawling unauthenticated HTTPS')
         print ('    >> Checking if reports folder exist and writable')
         if not os.path.exists(sys.argv[1]):
             print ('        >> Creating reports folder')
