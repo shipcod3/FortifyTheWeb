@@ -29,7 +29,8 @@ Directory structure
     |  `- sockets             
     |  `- strings
     |
-    `- ftw.py (core)              
+    `- ftw.py (core)
+    `- bootstrap.py (dependency)
 	`- Changelog
 	`- ToDo
 	`- Readme
