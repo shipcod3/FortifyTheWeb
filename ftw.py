@@ -98,4 +98,5 @@ else:
 
 print "[*] Shutting down......"
 time.sleep(4)
+print 'Scan finished'
 timer()
