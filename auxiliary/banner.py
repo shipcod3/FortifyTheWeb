@@ -60,7 +60,7 @@ def exitbanner():
 	print(' \033[94mVersion: v1.0\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[91mPlease provide target!\033[0m')
-  	print(' \033[91mmUsage: python ftw.py target\033[0m')
+  	print(' \033[91mUsage: python ftw.py target\033[0m')
   	print(' \033[91mExample: python ftw.py google.com 80\033[0m')
   	print""
   	sys.exit()	
