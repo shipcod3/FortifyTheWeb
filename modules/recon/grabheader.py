@@ -66,8 +66,8 @@ def grabheader():
  	else:
 		printout('  >> ' + grabxcontent, GREEN)
 
-
  	response.close()  
+	print'[*] Header analysis finishing....'
  	time.sleep(3)
 
 

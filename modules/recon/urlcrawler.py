@@ -15,7 +15,7 @@ def urlcrawler():
     	print (' [+] Crawling unauthenticated HTTP')
         print ('    >> Checking if reports folder exist and writable')
         if not os.path.exists(sys.argv[1]):
-            print ('        >> Creating reports folder')
+            print ('    >> Creating reports folder')
             os.makedirs(sys.argv[1])
             os.chdir(sys.argv[1])
             f = open(sys.argv[1] + '.crawl.txt', 'w')
@@ -30,7 +30,7 @@ def urlcrawler():
     	print (' [+] Crawling unauthenticated HTTPS')
         print ('    >> Checking if reports folder exist and writable')
         if not os.path.exists(sys.argv[1]):
-            print ('        >> Creating reports folder')
+            print ('    >> Creating reports folder')
             os.makedirs(sys.argv[1])
             os.chdir(sys.argv[1])
             f = open(sys.argv[1] + '.crawl.txt', 'w')
@@ -44,5 +44,5 @@ def urlcrawler():
     else:
         printout (' [!] Error performing crawl', RED)
 
-	
-	time.sleep(3)
+    print'[*] Crawl finishing....'
+time.sleep(3)

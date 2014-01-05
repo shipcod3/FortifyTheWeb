@@ -36,6 +36,7 @@ from colors import *
 sys.path.append(r'modules/recon')
 from grabheader import *
 from urlcrawler import *
+from portScan   import *
 
 # Check if target is within the argument
 
@@ -66,7 +67,6 @@ if sys.argv[2] == '80':
         grabheader()
         print ""
         urlcrawler()
-        printout ('[*] Crawl finishing....', GREEN)
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -84,7 +84,6 @@ elif sys.argv[2] == '443':
         grabheader()
         print ""
         urlcrawler()
-        printout ('[*] Crawl finishing....', GREEN)
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -93,9 +92,11 @@ else:
         printout (' [!] Target does not have default http(s) port', RED)
         time.sleep(3) # Give a little time to sleep
 
-
 # Load modules for testing
 
+print ""
+portScan()
+print 'moving reports folder'
 print "[*] Shutting down......"
 time.sleep(4)
 print 'Scan finished'

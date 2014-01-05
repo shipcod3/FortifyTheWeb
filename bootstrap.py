@@ -17,7 +17,7 @@ for module_name in ftwmods:
     __import__(module_name)
     print " ++ Module %s found." %(module_name) 
   except ImportError:
-    print " -- Please install dependency %s ." %(module_name)
+    print "\033[91m -- Please install dependency %s . \033[0m" %(module_name)
     print "BootStrap finishing"
 
 time.sleep(3)
