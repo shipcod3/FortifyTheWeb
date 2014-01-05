@@ -9,13 +9,13 @@ from bs4 import BeautifulSoup
 from colors import *
 
 def urlcrawler():
-    print "[**] Starting Spider"
+    print "[**] Starting Spider......"
     time.sleep(3)
     if sys.argv[2] == '80':
     	print (' [+] Crawling unauthenticated HTTP')
-        print ('    >> Checking if reports folder exist and writable')
+        print ('    >> Checking if client folder exist and writable')
         if not os.path.exists(sys.argv[1]):
-            print ('    >> Creating reports folder')
+            print ('    >> Creating client folder')
             os.makedirs(sys.argv[1])
             os.chdir(sys.argv[1])
             f = open(sys.argv[1] + '.crawl.txt', 'w')
@@ -28,9 +28,9 @@ def urlcrawler():
 
     elif sys.argv[2] == '443':
     	print (' [+] Crawling unauthenticated HTTPS')
-        print ('    >> Checking if reports folder exist and writable')
+        print ('    >> Checking if client folder exist and writable')
         if not os.path.exists(sys.argv[1]):
-            print ('    >> Creating reports folder')
+            print ('    >> Creating client folder')
             os.makedirs(sys.argv[1])
             os.chdir(sys.argv[1])
             f = open(sys.argv[1] + '.crawl.txt', 'w')
@@ -44,5 +44,5 @@ def urlcrawler():
     else:
         printout (' [!] Error performing crawl', RED)
 
-    print'[*] Crawl finishing....'
+    print'[==] Crawl finishing...'
 time.sleep(3)

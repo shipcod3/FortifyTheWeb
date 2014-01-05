@@ -63,9 +63,7 @@ if sys.argv[2] == '80':
         print "[*] Checking if http port (80) on target is open"
         printout (' >> HTTP port on target is open', GREEN)
         printout (' >> Marking for http testing', GREEN)
-        print ""
         grabheader()
-        print ""
         urlcrawler()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -80,9 +78,7 @@ elif sys.argv[2] == '443':
         print "[*] Checking https port (443) on target is open"
         printout (' >> HTTPS port on target is open', GREEN)
         printout (' >> Marking for https testing', GREEN)
-        print ""
         grabheader()
-        print ""
         urlcrawler()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -94,10 +90,11 @@ else:
 
 # Load modules for testing
 
-print ""
+# Perform portscan on target
 portScan()
+print ""
 print 'moving reports folder'
-print "[*] Shutting down......"
+print "[!!!] Shutting down......"
 time.sleep(4)
 print 'Scan finished'
 timer()

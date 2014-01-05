@@ -7,7 +7,7 @@ import sys, urllib2, time
 from colors import *
 
 def grabheader():
-	print "[**] Starting header analysis"
+	print "[**] Starting header analysis......"
 	response = urllib2.urlopen('http://' + sys.argv[1])
 
 	# Server header settings
@@ -31,7 +31,7 @@ def grabheader():
 	if grabcontent is None:
 		printout('  >> Failed to get header value *not vulnerable*', RED)
 	else:
-		printout('  >> ' + grabcontent , GREEN)
+		printout('  >> ' + grabcontent, GREEN)
 
 	 # Server header security settings
 	
@@ -48,26 +48,26 @@ def grabheader():
 	grabframeopt = response.info().getheader('x-frame-options')
 	print " [+] Grabbing x-frame-options "
 	if grabframeopt is None:
-		printout('  >>  No x-frame-options *vulnerability to click-jacking is possible*', RED)
+		printout('  >>  No x-frame-options *vulnerable to click-jacking possible*', RED)
 	else:
-		printout('  >> ' + grabframeopt, GREEN)
+		printout('  >> ' + grabframeopt + ' *flag found (not vulnerable)*', GREEN)
 	
 	grabxssprotect = response.info().getheader('x-xss-protection')
 	print " [+] Grabbing x-xss-protection "
 	if grabframeopt is None:
-		printout('  >> No XSS protection *vulnerability to XSS is possible*', RED)
+		printout('  >> No XSS protection *vulnerable to XSS possible*', RED)
 	else:
-		printout('  >> ' + grabframeopt, GREEN)
+		printout('  >> ' + grabframeopt + ' *flag found (not vulnerable)*', GREEN)
 	
 	grabxcontent = response.info().getheader('x-content-type-options')
 	print " [+] Grabbing x-content-type-options"
 	if grabxcontent is None:
-		printout('  >> No x-content-type-options *vulnerability to MIME sniffing is possible*', RED)
+		printout('  >> No x-content-type-options *vulnerable to MIME sniffing possible*', RED)
  	else:
-		printout('  >> ' + grabxcontent, GREEN)
+		printout('  >> ' + grabxcontent + ' *flag found (not vulnerable)*', GREEN)
 
  	response.close()  
-	print'[*] Header analysis finishing....'
+	print'[==] Header analysis finishing...'
  	time.sleep(3)
 
 
