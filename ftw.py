@@ -12,7 +12,7 @@
 # description:       FortifyTheWeb Framework core
 # author:            @semprix, @shipcod3, @httphacker, @napz
 # platform:          Python
-# version:            0.1
+# version:           1.0.0
 
 #
 # Begin
