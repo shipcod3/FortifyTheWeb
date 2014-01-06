@@ -39,8 +39,12 @@ def grabheader():
 
 	if sys.argv[2] == '443':
 		print " [+] Grabbing SSL header settings "
-		printout('  >>  SSL Checks go here', WHITE)
-
+		grabhsts = response.info().getheader('Strict-Transport-Security')
+		if grabhsts is None:
+			printout('  >>  No HSTS Policy *vulnerable*', RED)
+		else:
+			printout('  >> ' + grabhsts + ' *flag found (not vulnerable)*', GREEN)
+		
 	else:
 		print "[!] Target not using SSL, proceed with http..."
 		time.sleep(3)
