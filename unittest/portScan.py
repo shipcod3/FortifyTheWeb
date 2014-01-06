@@ -1,3 +1,7 @@
+# portScan.py
+# description: port scanner for ftw
+# author: @semprix
+
 import os, sys
 from socket import *
 
