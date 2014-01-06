@@ -26,8 +26,11 @@ Directory structure
     |  `- discovery
     |  `- exploitation 
     | - unittest
-    |  `- sockets             
-    |  `- strings
+    |  `- modules 
+    |      `- recon
+    |	   `- crypto
+    |  `- auxiliary
+    |  `- exploits
     |
     `- ftw.py (core)
     `- bootstrap.py (dependency)
