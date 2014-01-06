@@ -92,6 +92,7 @@ else:
 
 # Perform portscan on target
 portScan()
+
 print ""
 print 'moving reports folder'
 print "[!!!] Shutting down......"
