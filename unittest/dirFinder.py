@@ -1,6 +1,7 @@
 # dirfinder.py
 # description: brute folder discovery
 # author: @napz
+
 import sys, requests, time
 
 
