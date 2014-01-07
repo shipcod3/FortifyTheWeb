@@ -11,7 +11,7 @@ print "  [+] Getting OS version"
 ftwenv = os.uname()
 print        ftwenv
 
-print "  [+] Checking for python modules"
+print "  [+] Checking for required python modules"
 for module_name in ftwmods:
   try:
     __import__(module_name)
