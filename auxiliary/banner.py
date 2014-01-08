@@ -5,7 +5,6 @@
 import sys, time, socket, os
 
 sys.path.append(r'auxiliary')
-from timer import *
 from colors import *
 
 def startbanner():
