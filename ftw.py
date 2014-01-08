@@ -25,7 +25,6 @@ from datetime import datetime
 
 sys.path.append(r'auxiliary')
 from banner import *
-from timer import *
 from colors import *
 
 # Load ftw modules
@@ -33,7 +32,7 @@ from colors import *
 sys.path.append(r'modules/recon')
 from grabheader import *
 from urlcrawler import *
-from portScan   import *
+from portScan import *
 
 # Check if target is within the argument
 
