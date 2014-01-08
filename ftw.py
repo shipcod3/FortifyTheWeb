@@ -19,6 +19,7 @@
 import ping, time, sys, urllib2, subprocess, socket
 
 from termcolor import colored, cprint
+from datetime import datetime
 
 # Load ftw auxiliary
 
@@ -43,6 +44,7 @@ if len(sys.argv) <= 2 :
 else:
 
 # Fortify the Web when ready
+    starttime = datetime.now()
     startbanner()
 
 # Run stage 1 banner
@@ -92,5 +94,6 @@ else:
 # Shutdown application
 print "[!!!] Shutting down......"
 time.sleep(4)
-print 'Scan finished'
-timer()
+endtime = datetime.now()
+total = endtime - starttime
+print 'Scan completed in: ', total
