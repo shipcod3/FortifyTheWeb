@@ -1,5 +1,5 @@
 # Fortify The Web framework
-#
+# Web application security testing framework
 # ______         _   _  __    _______ _       __          __  _     
 #|  ____|       | | (_)/ _|  |__   __| |      \ \        / / | |    
 #| |__ ___  _ __| |_ _| |_ _   _| |  | |__   __\ \  /\  / /__| |__  
@@ -14,24 +14,20 @@
 # platform:          Python
 # version:           1.0.0
 
-#
-# Begin
-#
-
-# Required Python libs
+# Load python libraries
 
 import ping, time, sys, urllib2, subprocess, socket
 
 from termcolor import colored, cprint
 
-# Load auxiliary
+# Load ftw auxiliary
 
 sys.path.append(r'auxiliary')
 from banner import *
 from timer import *
 from colors import *
 
-# Load modules
+# Load ftw modules
 
 sys.path.append(r'modules/recon')
 from grabheader import *
@@ -49,7 +45,6 @@ else:
 # Fortify the Web when ready
     startbanner()
 
-
 # Run stage 1 banner
     stage1banner()
 
@@ -63,8 +58,11 @@ if sys.argv[2] == '80':
         print "[*] Checking if http port (80) on target is open"
         printout (' >> HTTP port on target is open', GREEN)
         printout (' >> Marking for http testing', GREEN)
+
+        # Load application modules
         grabheader()
         urlcrawler()
+        portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -78,8 +76,11 @@ elif sys.argv[2] == '443':
         print "[*] Checking https port (443) on target is open"
         printout (' >> HTTPS port on target is open', GREEN)
         printout (' >> Marking for https testing', GREEN)
+
+        # Load application modules
         grabheader()
         urlcrawler()
+        portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -88,13 +89,7 @@ else:
         printout (' [!] Target does not have default http(s) port', RED)
         time.sleep(3) # Give a little time to sleep
 
-# Load modules for testing
-
-# Perform portscan on target
-portScan()
-
-print ""
-print 'moving reports folder'
+# Shutdown application
 print "[!!!] Shutting down......"
 time.sleep(4)
 print 'Scan finished'
