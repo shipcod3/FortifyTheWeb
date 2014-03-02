@@ -31,6 +31,7 @@ from colors import *
 
 sys.path.append(r'modules/recon')
 from grabheader import *
+from dnsMiscon import *
 from urlcrawler import *
 from portScan import *
 
@@ -62,6 +63,7 @@ if sys.argv[2] == '80':
 
         # Load application modules
         grabheader()
+        dnsMiscon()
         urlcrawler()
         portScan()
     except socket.error as e:
