@@ -82,6 +82,7 @@ elif sys.argv[2] == '443':
 
         # Load application modules
         grabheader()
+        dnsMiscon()
         urlcrawler()
         portScan()
     except socket.error as e:
