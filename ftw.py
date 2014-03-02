@@ -33,6 +33,7 @@ sys.path.append(r'modules/recon')
 from grabheader import *
 from dnsMiscon import *
 from urlcrawler import *
+from subdomainLookup import *
 from portScan import *
 
 # Check if target is within the argument
@@ -65,6 +66,7 @@ if sys.argv[2] == '80':
         grabheader()
         dnsMiscon()
         urlcrawler()
+        subdomainLookup()
         portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -84,6 +86,7 @@ elif sys.argv[2] == '443':
         grabheader()
         dnsMiscon()
         urlcrawler()
+        subdomainLookup()
         portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
