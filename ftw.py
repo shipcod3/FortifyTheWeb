@@ -36,6 +36,9 @@ from urlcrawler import *
 from subdomainLookup import *
 from portScan import *
 
+# define your ftw directory installation
+ftwdir = "/home/gecko/github/FortifyTheWeb/"
+
 # Check if target is within the argument
 
 if len(sys.argv) <= 2 :
@@ -96,10 +99,11 @@ else:
         printout (' [!] Target does not have default http(s) port', RED)
         time.sleep(3) # Give a little time to sleep
 
-# Shutdown application
-src = sys.argv[1]
-dst = "data"
-shutil.move(src, dst)
+# Move scan results to data folder
+print "[***] Moving report files to data folder"
+print ""
+os.chdir(ftwdir)
+os.renames(sys.argv[1], "data/" + sys.argv[1])
 print "[!!!] Shutting down......"
 time.sleep(4)
 endtime = datetime.now()
