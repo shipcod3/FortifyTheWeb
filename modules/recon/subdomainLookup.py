@@ -40,11 +40,9 @@ class Webdog:
 			for r in globals()['results']:
 				print r
 			print '\n- Error: canceled by user'
-			sys.exit()
 		
 		except urllib2.HTTPError, e:
 			print e
-			sys.exit()
 
 		except: raise RuntimeError('Error: unable to open url')
 		
@@ -74,7 +72,6 @@ def subdomainLookup():
 	results = w.search('site:' + w.domainname)
 	if len(results) < 1:
 		printout ('  >> No result found for %s' % w.domainname, RED)
-		sys.exit()
 	else:
 		others = results
 		while len(others) > 0:
