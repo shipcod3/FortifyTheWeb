@@ -4,7 +4,7 @@
 # copyright (c)2009:  Sertan Kolat - sertan@olympos.org
 # cookie support and additional patches: Bedirhan Urgun
 
-import re, sys, urllib, urllib2, cookielib, time 
+import re, sys, urllib, urllib2, cookielib, time, os
 from colors import *
 
 def Uniq(u):
@@ -54,11 +54,10 @@ class Webdog:
 		url = 'http://www.google.com/m/search?q=%s' % urllib.quote(keyw)
 		if self.usestart:
 			if self.start == 0:
-				printout ('[!] Found more than 20 subdomains, fetching search results on other pages. This may take a long time depending on target.', GREEN)
+				printout ('   [!] Found more than 20 subdomains, fetching search results on other pages. This may take a long time depending on target.', GREEN)
 			self.start = self.start + 10
 			url = url + '&start=%s' % self.start
 			sys.stdout.write('.')
-			
 		content = self.get(url)
 		results = re.findall(
 				'<cite>\s?([-\w.]*?\.%s).*?</cite>' % self.domainname, content)
@@ -90,9 +89,12 @@ def subdomainLookup():
 	
 	results.sort()
 	printout('    [!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
-	for r in results:
+	with open(sys.argv[1] + '.subdomains.txt', 'w') as f:
+	 for r in results:
 		print "    >> "+r
+		f.write("%s\n" % str(r))
 		print ""
+        print "  [+] Writing subdomains to file..."
         print "[==] Subdomain harvest finishing..."
         print ""
         time.sleep(3)
