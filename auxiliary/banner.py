@@ -39,9 +39,10 @@ def startbanner():
 
 def stage1banner():
 	print "\033[94m[Starting Stage 1] Passive Reconnaissance\033[0m"
-	print "\033[94m -- Header Analysis\033[0m"
-	print "\033[94m -- Site Spider\033[0m"
-	print "\033[94m -- Subdomain Harvest\033[0m"
+	print "\033[94m + Header Analysis\033[0m"
+	print "\033[94m + Site Spider\033[0m"
+	print "\033[94m + Subdomain Harvest\033[0m"
+	print ""
 	time.sleep(2)
 
 

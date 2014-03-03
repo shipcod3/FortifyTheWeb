@@ -1,6 +1,7 @@
 # subdomainLookup.py
 # description: uses google to search for subdomains
-# modifier / author: @shipcod3
+# forker: @shipcod3
+#
 # copyright (c)2009:  Sertan Kolat - sertan@olympos.org
 # cookie support and additional patches: Bedirhan Urgun
 

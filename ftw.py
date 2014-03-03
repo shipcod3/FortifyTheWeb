@@ -106,6 +106,8 @@ time.sleep(5)
 os.chdir(ftwdir)
 os.renames(sys.argv[1], "data/" + sys.argv[1])
 print "[!!!] Shutting down......"
+printout ('[@@@] Check results in data folder', GREEN)
+print ""
 time.sleep(4)
 endtime = datetime.now()
 total = endtime - starttime
