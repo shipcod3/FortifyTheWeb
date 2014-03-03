@@ -97,6 +97,9 @@ else:
         time.sleep(3) # Give a little time to sleep
 
 # Shutdown application
+src = sys.argv[1]
+dst = "data"
+shutil.move(src, dst)
 print "[!!!] Shutting down......"
 time.sleep(4)
 endtime = datetime.now()
