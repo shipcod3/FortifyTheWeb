@@ -7,6 +7,4 @@ def loader(text):
         print c,
         sys.stdout.flush()
         time.sleep(0.9)
-
 loader('*=*=*=*=*=*=*=*\n')
-print ">> Finishing"
