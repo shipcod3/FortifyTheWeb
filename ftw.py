@@ -102,6 +102,7 @@ else:
 # Move scan results to data folder
 print "[***] Moving report files to data folder"
 print ""
+time.sleep(5)
 os.chdir(ftwdir)
 os.renames(sys.argv[1], "data/" + sys.argv[1])
 print "[!!!] Shutting down......"
