@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from colors import *
 
 def urlcrawler():
+    print ""
     print "[**] Starting Spider......"
     time.sleep(3)
     if sys.argv[2] == '80':

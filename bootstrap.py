@@ -4,7 +4,7 @@
 
 import sys, os, time
 
-ftwmods =['socket','nmap','bs4','requests','termcolor','ping','beautifulsoap']
+ftwmods =['socket','bs4','requests','termcolor','ping','beautifulsoup4']
 
 print "[***] BootStrapping FortifyTheWeb. Please wait....."
 print "  [+] Getting OS version"
@@ -18,6 +18,5 @@ for module_name in ftwmods:
     print " ++ Module %s found." %(module_name) 
   except ImportError:
     print "\033[91m -- Please install dependency ==>> (%s). \033[0m" %(module_name)
-    print "BootStrap finishing"
-    print ""
+print "BootStrap finishing"
 time.sleep(3)

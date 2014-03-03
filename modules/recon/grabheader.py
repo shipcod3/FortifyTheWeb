@@ -7,6 +7,7 @@ import sys, urllib2, time
 from colors import *
 
 def grabheader():
+	print ""
 	print "[**] Starting header analysis......"
 	response = urllib2.urlopen('http://' + sys.argv[1])
 

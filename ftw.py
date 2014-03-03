@@ -64,10 +64,10 @@ if sys.argv[2] == '80':
 
         # Load application modules
         grabheader()
-        dnsMiscon()
         urlcrawler()
+        #dnsMiscon() // reserve for stage 2 discovery
         subdomainLookup()
-        portScan()
+        #portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -84,10 +84,10 @@ elif sys.argv[2] == '443':
 
         # Load application modules
         grabheader()
-        dnsMiscon()
         urlcrawler()
+        #dnsMiscon() // reserve for stage 2 discovery
         subdomainLookup()
-        portScan()
+        #portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()

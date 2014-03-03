@@ -67,7 +67,8 @@ class Webdog:
 		return results
 	
 def subdomainLookup():
-	print "[**] Checking for subdomains using Google......"
+	print ""
+	print "[**] Starting subdomain harvest......"
 	results = []
 	w = Webdog()
 	w.domainname = sys.argv[1]
@@ -88,9 +89,10 @@ def subdomainLookup():
 				results = list(set(results) | set(others))
 	
 	results.sort()
-	printout('[!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
+	printout('    [!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
 	for r in results:
-		print "  >> "+r
-
-        print "[==] Done checking searching for subdomains"
+		print "    >> "+r
+		print ""
+        print "[==] Subdomain harvest finishing..."
+        print ""
         time.sleep(3)

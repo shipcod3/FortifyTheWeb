@@ -11,6 +11,8 @@ def portScan():
      target    = sys.argv[1]
      targetIP  = socket.gethostbyname(target)
 
+     print " Performing Portscan"
+
      try:
         for port in range(1,1025):  
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
