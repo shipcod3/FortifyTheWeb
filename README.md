@@ -20,7 +20,9 @@ Directory structure
 -------------------
 
 	[root]
-	| - auxiliary 
+	| - auxiliary
+    | - config
+    | - data
     | - modules
     |  `- recon
     |  `- discovery
