@@ -27,14 +27,12 @@ sys.path.append(r'auxiliary')
 from banner import *
 from colors import *
 
-# Load ftw modules
+# Load stage 1 ftw modules
 
 sys.path.append(r'modules/recon')
 from grabheader import *
-from dnsMiscon import *
 from urlcrawler import *
 from subdomainLookup import *
-from portScan import *
 
 # define your ftw directory installation
 config = ConfigParser.ConfigParser()
@@ -70,9 +68,7 @@ if sys.argv[2] == '80':
         # Load application modules
         grabheader()
         urlcrawler()
-        #dnsMiscon() // reserve for stage 2 discovery
         subdomainLookup()
-        #portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -90,9 +86,7 @@ elif sys.argv[2] == '443':
         # Load application modules
         grabheader()
         urlcrawler()
-        #dnsMiscon() // reserve for stage 2 discovery
         subdomainLookup()
-        #portScan()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
