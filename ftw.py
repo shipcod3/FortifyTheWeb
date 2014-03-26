@@ -16,7 +16,7 @@
 
 # Load python libraries
 
-import ping, time, sys, urllib2, subprocess, socket
+import ping, time, sys, urllib2, subprocess, socket, ConfigParser, string
 
 from termcolor import colored, cprint
 from datetime import datetime
@@ -37,7 +37,9 @@ from subdomainLookup import *
 from portScan import *
 
 # define your ftw directory installation
-ftwdir = "/home/gecko/github/FortifyTheWeb/"
+config = ConfigParser.ConfigParser()
+config.read("config/config.ini")
+ftwdir=config.get("path", "ftwdir")
 
 # Check if target is within the argument
 
@@ -112,3 +114,4 @@ time.sleep(4)
 endtime = datetime.now()
 total = endtime - starttime
 print 'Scan completed in: ', total
+
