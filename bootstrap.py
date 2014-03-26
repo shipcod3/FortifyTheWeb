@@ -4,7 +4,7 @@
 
 import sys, os, time
 
-ftwmods =['socket','bs4','requests','termcolor','ping','beautifulsoup4']
+ftwmods =['socket','bs4','requests','termcolor','ping']
 
 print "[***] BootStrapping FortifyTheWeb. Please wait....."
 print "  [+] Getting OS version"
