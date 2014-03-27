@@ -2,13 +2,11 @@
 # description: banner used at core
 # author: @semprix
 
-import sys, time, socket, os, ConfigParser, string
+import sys, time, socket, os, string
 
 sys.path.append(r'auxiliary')
 from colors import *
 
-config = ConfigParser.ConfigParser()
-config.read("config/config.ini")
 
 def startbanner():
 
@@ -26,7 +24,7 @@ def startbanner():
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[94mFTW (Fortify The Web)\033[0m')
 	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz\033[0m')
-	print " \033[94mVersion: v" + config.get("version", "current") + "\033[0m"
+	print(' \033[94mVersion: v1.0rc1\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print ""
 
@@ -65,7 +63,7 @@ def exitbanner():
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[94mFTW (Fortify The Web)\033[0m')
 	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz\033[0m')
-	print " \033[94mVersion: v" + config.get("version", "current") + "\033[0m"
+	print(' \033[94mVersion: v1.0rc1\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[91mPlease provide target!\033[0m')
   	print(' \033[91mUsage: python ftw.py target\033[0m')
