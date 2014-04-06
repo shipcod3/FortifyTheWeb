@@ -55,8 +55,8 @@ Install
 
 Python2.7 should be present on the system
 
-1. Using git - git clone git@github.com:semprix/FortifyTheWeb.git
-2. Downloading release - download at https://github.com/semprix/FortifyTheWeb/releases
+1. (Install Option #1) Using git - git clone git@github.com:semprix/FortifyTheWeb.git
+2. (Install Option #2) Downloading release - download at https://github.com/semprix/FortifyTheWeb/releases
 3. Run bootstrap.py - this will check all python module dependencies
 4. Run ftw.py - python ftw.py <yourtarget.com> <yourtargetport>
 5. Move the result away from data/<target_folder> to avoid overwriting it.
