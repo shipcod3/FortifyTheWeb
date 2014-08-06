@@ -29,16 +29,18 @@ backup_files = [
 
 for backup_file in backup_files:
     conn = httplib.HTTPConnection(host)
-    conn.request('HEAD', '/' + backup_file)
+    conn.request('GET', '/' + backup_file)
 
     url = 'http://{0}/{1}'.format(host, backup_file)
     print '    Checking: {0}'.format(url)
 
     response = conn.getresponse()
     print '    >> ', response.status, response.reason
+    
+    msg = respnse.read([100])
 
     conn.close()
     
-    if response.status == 200:
+    if response.status == 200 and '<?php':
         print ("[!] The file '{0}' "
                "could be interesting.").format(backup_file)
