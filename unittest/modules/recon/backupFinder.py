@@ -37,7 +37,7 @@ for backup_file in backup_files:
     response = conn.getresponse()
     print '    >> ', response.status, response.reason
     
-    msg = respnse.read([100])
+    msg = response.read([100])
 
     conn.close()
     
