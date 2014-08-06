@@ -41,6 +41,6 @@ for backup_file in backup_files:
 
     conn.close()
     
-    if response.status == 200 and '<?php':
+    if response.status == 200 and '<?php' in msg:
         print ("[!] The file '{0}' "
                "could be interesting.").format(backup_file)
