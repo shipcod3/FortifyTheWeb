@@ -23,7 +23,7 @@ def startbanner():
 	print""
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[94mFTW (Fortify The Web)\033[0m')
-	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz\033[0m')
+	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz, @medz\033[0m')
 	print(' \033[94mVersion: v1.0rc1\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print ""
@@ -43,7 +43,6 @@ def startbanner():
 def stage1banner():
 	print "\033[94m[Starting Stage 1] Reconnaissance\033[0m"
 	print "\033[94m + Header Analysis\033[0m"
-	print "\033[94m + Site Spider\033[0m"
 	print "\033[94m + Subdomain Harvest\033[0m"
 	print ""
 	time.sleep(2)
@@ -62,7 +61,7 @@ def exitbanner():
 	print""
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[94mFTW (Fortify The Web)\033[0m')
-	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz\033[0m')
+	print(' \033[94mDevs: @semprix, @httphacker, @shipcod3, @napz, @medz\033[0m')
 	print(' \033[94mVersion: v1.0rc1\033[0m')
 	print(' \033[94m******************************************\033[0m')
 	print(' \033[91mPlease provide target!\033[0m')
