@@ -86,13 +86,16 @@ def subdomainLookup():
 				results = list(set(results) | set(others))
 	
 	results.sort()
-	printout('    [!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
+	printout('[!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
 	with open(sys.argv[1] + '.subdomains.txt', 'w') as f:
 	 for r in results:
-		print "    >> "+r
+		print " [+]"+r
 		f.write("%s\n" % str(r))
 		print ""
-        print "  [+] Writing subdomains to file..."
+        print " [+] Writing subdomains to file..."
         print "[==] Subdomain harvest finishing..."
         print ""
         time.sleep(3)
+        os.makedirs(sys.argv[1])
+        os.chdir(sys.argv[1])
+        f = open(sys.argv[1] + '.subdomains.txt', 'w')

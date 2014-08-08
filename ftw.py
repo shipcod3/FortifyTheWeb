@@ -31,7 +31,6 @@ from colors import *
 
 sys.path.append(r'modules/recon')
 from grabheader import *
-from urlcrawler import *
 from subdomainLookup import *
 
 # define your ftw directory installation
@@ -67,7 +66,6 @@ if sys.argv[2] == '80':
 
         # Load application modules
         grabheader()
-        urlcrawler()
         subdomainLookup()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -85,7 +83,6 @@ elif sys.argv[2] == '443':
 
         # Load application modules
         grabheader()
-        urlcrawler()
         subdomainLookup()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -97,13 +94,13 @@ else:
 
 # Move scan results to data folder
 print "[***] Moving report files to data folder"
-print ""
 time.sleep(5)
 os.chdir(ftwdir)
 os.renames(sys.argv[1], "data/" + sys.argv[1])
-print "[!!!] Shutting down......"
-printout ('[@@@] Check results in data folder', GREEN)
+print "[***] Cleaning up files......"
+os.remove(sys.argv[1] + '.subdomains.txt')
 print ""
+print "[!!!] Shutting down......"
 time.sleep(4)
 endtime = datetime.now()
 total = endtime - starttime
