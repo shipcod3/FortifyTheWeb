@@ -67,6 +67,11 @@ class Webdog:
 def subdomainLookup():
 	print ""
 	print "[**] Starting subdomain harvest......"
+	print ('>> Checking if client folder exist and writable')
+        if not os.path.exists(sys.argv[1]):
+            print ('>> Creating client folder')
+            os.makedirs(sys.argv[1])
+            os.chdir(sys.argv[1])
 	results = []
 	w = Webdog()
 	w.domainname = sys.argv[1]
@@ -93,9 +98,7 @@ def subdomainLookup():
 		f.write("%s\n" % str(r))
 		print ""
         print " [+] Writing subdomains to file..."
-        print "[==] Subdomain harvest finishing..."
+        print "[==] Subdomain harvest finishing..."	
         print ""
         time.sleep(3)
-        os.makedirs(sys.argv[1])
-        os.chdir(sys.argv[1])
-        f = open(sys.argv[1] + '.subdomains.txt', 'w')
+     

@@ -97,8 +97,6 @@ print "[***] Moving report files to data folder"
 time.sleep(5)
 os.chdir(ftwdir)
 os.renames(sys.argv[1], "data/" + sys.argv[1])
-print "[***] Cleaning up files......"
-os.remove(sys.argv[1] + '.subdomains.txt')
 print ""
 print "[!!!] Shutting down......"
 time.sleep(4)
