@@ -16,6 +16,8 @@ httphacker - Nathan LaFollete - contributor
 
 napz - Harris Soleminio - contributor
 
+medz - Midelito Barao - contributor
+
 Directory structure
 -------------------
 
