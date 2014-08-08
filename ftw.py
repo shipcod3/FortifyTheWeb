@@ -10,9 +10,9 @@
 #                          |___/       
 #
 # description:       FortifyTheWeb Framework core
-# author:            @semprix, @shipcod3, @httphacker, @napz
+# author:            @semprix, @shipcod3, @httphacker, @napz, @medz
 # platform:          Python
-# version:           1.0.0
+# version:           1.0rc1
 
 # Load python libraries
 
