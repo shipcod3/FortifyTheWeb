@@ -2,7 +2,7 @@
 # description: Dependency checker, bootstrapping FTW.
 # author: @semprix
 
-import sys, os, time, ConfigParser
+import sys, os, time, ConfigParser, platform
 
 ftwmods =['socket','bs4','requests','termcolor','ping', 'ConfigParser']
 
@@ -14,7 +14,7 @@ ftwdir=config.get("path", "ftwdir")
 print "[***] BootStrapping FortifyTheWeb. Please wait....."
 time.sleep (5)
 print "[+] Getting OS version"
-ftwenv = os.uname()
+ftwenv = platform.platform()
 print        ftwenv
 print "[+] Checking FTW data path"
 print "[**] Data path found on:" + ftwdir + " (define path if needed)"
