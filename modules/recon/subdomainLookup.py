@@ -65,7 +65,6 @@ class Webdog:
 		return results
 	
 def subdomainLookup():
-	print ""
 	print "[**] Starting subdomain harvest......"
 	print ('>> Checking if client folder exist and writable')
         if not os.path.exists(sys.argv[1]):

@@ -73,6 +73,7 @@ def grabheader():
 
  	response.close()  
 	print'[==] Header analysis finishing...'
+	print ""
  	time.sleep(3)
 
 

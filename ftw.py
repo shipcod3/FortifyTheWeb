@@ -33,6 +33,9 @@ sys.path.append(r'modules/recon')
 from grabheader import *
 from subdomainLookup import *
 
+sys.path.append(r'modules/discovery')
+from dnsMiscon import *
+
 # define your ftw directory installation
 config = ConfigParser.ConfigParser()
 config.read("config/config.ini")
@@ -66,6 +69,7 @@ if sys.argv[2] == '80':
 
         # Load application modules
         grabheader()
+        dnsMiscon()
         subdomainLookup()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
@@ -83,6 +87,7 @@ elif sys.argv[2] == '443':
 
         # Load application modules
         grabheader()
+        dnsMiscon()
         subdomainLookup()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
