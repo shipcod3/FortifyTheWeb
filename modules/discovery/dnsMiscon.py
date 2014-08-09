@@ -17,6 +17,8 @@ def dnsMiscon():
         ip_addr = socket.gethostbyaddr("localhost."+sys.argv[1])
         if ip_addr[0] == "localhost":
             printout('  >> Vulnerable to DNS Misconfiguration which leads to Same-Site Scripting', RED)
+        else:
+            printout('  >> Not vulnerable)*', GREEN)
     except socket.error:
         printout('  >> Unable to resolve host (not vulnerable)*', GREEN)   
     print "[==] DNS Misconfiguration check finishing......"
