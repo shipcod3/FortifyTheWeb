@@ -42,7 +42,7 @@ config.read("config/config.ini")
 ftwdir=config.get("path", "ftwdir")
 
 
-class FortifyTheWeb(cmd.Cmd):
+class FortifyTheWebCore(cmd.Cmd):
     banner()
     intro = 'Type show help or show ? to list commands.\n'
     prompt = 'fortifytheweb >'
@@ -98,6 +98,6 @@ class FortifyTheWeb(cmd.Cmd):
         print
 
 if __name__ == '__main__':
-    FortifyTheWeb().cmdloop()
+    FortifyTheWebCore().cmdloop()
 
 ## EoF ###
