@@ -33,7 +33,7 @@ sys.path.append(r'modules/discovery')
 sys.path.append(r'modules/recon')
 sys.path.append(r'modules/vulnerability')
 from httpheaderanalyzer import *
-from subdomainlookup import *
+from subdomainfinder import *
 from dnsmisconfig import *
 
 # define your ftw directory installation
@@ -74,8 +74,8 @@ class FortifyTheWebCore(cmd.Cmd):
     def do_run(self, runopt):
         if runopt == 'httpheaderanalyzer':
             httpheaderanalyzer()
-        elif runopt == 'subdomainlookup':
-            subdomainlookup()
+        elif runopt == 'subdomainfinder':
+            subdomainfinder()
         elif runopt == 'dnsmisconfig':
             dnsmisconfig()
         else:

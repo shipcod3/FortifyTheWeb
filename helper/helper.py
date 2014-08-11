@@ -14,7 +14,7 @@ def showmods():
  print ' Command                       Location                                                  Author                   Description'
  print ""
  print ' httpheaderanalyzer            modules/recon/httpheaderanalyzer                          httphacker               Checks for vulnerability on http header response'
- print ' subdomainlookup               modules/discovery/subdomainlookup                         shipcode                 Harvest domain from the target'
+ print ' subdomainfinder               modules/discovery/subdomainfinder                         shipcode                 Harvest domain from the target'
  print ' dnsmisconfig                  modules/vulnerability/dnsmisconfig                        shipcode                 Check if target is vulnerable to DNS misconfiguration'
  print ' CMS detector                  modules/recon/cmsdetector                                 semprix                  Checks if the target is a using a specific CMS'
  print ' Heartbleed Analyser           modules/vulnerability/heartbleedanalyzer                  semprix                  Check the target if vulnerable to heartbleed attack'

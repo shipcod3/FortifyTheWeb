@@ -63,11 +63,11 @@ class Webdog:
 		
 		return results
 	
-def subdomainlookup():
+def subdomainfinder():
 	print 'Set RHOST:',
 	rhost = raw_input()
 	print ""
-	print "[****] Starting subdomain harvest......"
+	print "[****] Starting subdomain finder......"
 	print ""
 	results = []
 	w = Webdog()
