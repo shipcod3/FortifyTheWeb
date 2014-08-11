@@ -1,4 +1,4 @@
-# subdomainLookup.py
+# subdomainlookup.py
 # description: uses google to search for subdomains
 # forker: @shipcod3
 #
@@ -6,7 +6,6 @@
 # cookie support and additional patches: Bedirhan Urgun
 
 import re, sys, urllib, urllib2, cookielib, time, os
-from colors import *
 
 def Uniq(u):
 	un=[]
@@ -53,7 +52,7 @@ class Webdog:
 		url = 'http://www.google.com/m/search?q=%s' % urllib.quote(keyw)
 		if self.usestart:
 			if self.start == 0:
-				printout ('   [!] Found more than 20 subdomains, fetching search results on other pages. This may take a long time depending on target.', GREEN)
+			 print '[!] Found more than 20 subdomains, This may take a long time depending on target.'
 			self.start = self.start + 10
 			url = url + '&start=%s' % self.start
 			sys.stdout.write('.')
@@ -64,16 +63,15 @@ class Webdog:
 		
 		return results
 	
-def subdomainLookup():
-	print "[**] Starting subdomain harvest......"
-	print ('>> Checking if client folder exist and writable')
-        if not os.path.exists(sys.argv[1]):
-            print ('>> Creating client folder')
-            os.makedirs(sys.argv[1])
-            os.chdir(sys.argv[1])
+def subdomainlookup():
+	print 'Set RHOST:',
+	rhost = raw_input()
+	print ""
+	print "[****] Starting subdomain harvest......"
+	print ""
 	results = []
 	w = Webdog()
-	w.domainname = sys.argv[1]
+	w.domainname = rhost
 	results = w.search('site:' + w.domainname)
 	if len(results) < 1:
 		printout ('  >> No result found for %s' % w.domainname, RED)
@@ -90,14 +88,12 @@ def subdomainLookup():
 				results = list(set(results) | set(others))
 	
 	results.sort()
-	printout('[!] %s subdomains found for %s\n' % (len(results), w.domainname), GREEN)
-	with open(sys.argv[1] + '.subdomains.txt', 'w') as f:
-	 for r in results:
-		print " [+]"+r
-		f.write("%s\n" % str(r))
+	print '[!] %s subdomains found for %s\n' % (len(results), w.domainname)
+	for r in results:
+		print "[+]"+r
+		time.sleep(2)
 		print ""
-        print " [+] Writing subdomains to file..."
-        print "[==] Subdomain harvest finishing..."	
+        print "[####] Done!!!"	
         print ""
         time.sleep(3)
      
