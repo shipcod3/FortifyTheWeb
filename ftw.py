@@ -71,6 +71,7 @@ if sys.argv[2] == '80':
         grabheader()
         dnsMiscon()
         subdomainLookup()
+        stage2banner()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -89,6 +90,7 @@ elif sys.argv[2] == '443':
         grabheader()
         dnsMiscon()
         subdomainLookup()
+        stage2banner()
     except socket.error as e:
         printout (' >> Target seems to be down or port has been blocked', RED)
         s.close()
@@ -98,6 +100,7 @@ else:
         time.sleep(3) # Give a little time to sleep
 
 # Move scan results to data folder
+print "[***] Cleaning up....."
 print "[***] Moving report files to data folder"
 time.sleep(5)
 os.chdir(ftwdir)
