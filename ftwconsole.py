@@ -22,25 +22,26 @@ from termcolor import colored, cprint
 from datetime import datetime
 from os import walk
 
-# Load helper functions
+# System Path
 sys.path.append(r'helper')
+sys.path.append(r'modules/discovery')
+sys.path.append(r'modules/recon')
+sys.path.append(r'modules/vulnerability')
+
+# Load helper
 from helper import *
 from banner import *
 from greeter import *
 
 # Load modules
-sys.path.append(r'modules/discovery')
-sys.path.append(r'modules/recon')
-sys.path.append(r'modules/vulnerability')
 from httpheaderanalyzer import *
 from subdomainfinder import *
 from dnsmisconfig import *
 
-# define your ftw directory installation
+# Configuration directory
 config = ConfigParser.ConfigParser()
 config.read("config/config.ini")
 ftwdir=config.get("path", "ftwdir")
-
 
 class FortifyTheWebCore(cmd.Cmd):
     banner()
@@ -91,6 +92,11 @@ class FortifyTheWebCore(cmd.Cmd):
                             ]
         return completions
     
+    def do_shell(self, line):
+        output = os.popen(line).read()
+        print output
+        self.last_output = output
+
     def do_EOF(self, line):
         return True
     
