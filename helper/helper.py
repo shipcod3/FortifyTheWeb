@@ -4,7 +4,7 @@
 
 def showhelp():
  print "Available commands:"
- print "show, run, search"
+ print "show, run,, exploit, search"
 
 def showmods():
  print ""
@@ -21,6 +21,14 @@ def showmods():
  print ' HTTP MetaExtractor            modules/discover/httpmetaextractor                        semprix                  Extracts httpmeta data from the target application'
  print ' Backup file finder            modules/discovery/backupfilefinder                        shipcode                 Fuzz the target for known backup files'
  print ' Whois Lookup                  modules/recon/whoislookup                                 semprix                  Performs traditional whois lookup on the target'
+ print ""
+
+def showsploits():
+ print ""
+ print "FortifyTheWeb Exploits"
+ print "------------------------------------"
+ print ""
+ print ' whmcs                         modules/exploits/whmcs                                    shipcode                 Exploits the local file disclosure vulnerability of WHMCS version 3.x.x'
  print ""
 
 def showcredits():
