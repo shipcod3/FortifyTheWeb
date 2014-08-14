@@ -24,9 +24,10 @@ from os import walk
 
 # System Path
 sys.path.append(r'helper')
+sys.path.append(r'modules/vulnerability')
 sys.path.append(r'modules/discovery')
 sys.path.append(r'modules/recon')
-sys.path.append(r'modules/vulnerability')
+sys.path.append(r'modules/exploits')
 
 # Load helper
 from helper import *
@@ -37,6 +38,9 @@ from greeter import *
 from httpheaderanalyzer import *
 from subdomainfinder import *
 from dnsmisconfig import *
+
+# Load exploits
+from whmcs import *
 
 # Configuration directory
 config = ConfigParser.ConfigParser()
@@ -58,6 +62,8 @@ class FortifyTheWebCore(cmd.Cmd):
     def do_show(self, showopt):
         if showopt == 'modules':
             showmods()
+        elif showopt == 'exploits':
+            showsploits()
         elif showopt == 'credits':
             showcredits()
         elif showopt == 'help':
@@ -92,6 +98,13 @@ class FortifyTheWebCore(cmd.Cmd):
                             ]
         return completions
     
+    # FortifyTheWeb Exploits
+    def do_exploit(self,exploitopt):
+        if exploitopt == 'whmcs':
+            whmcs()
+        else:
+            print "[!!!] No exploit(s) found by that name (this could be a typo)."
+
     def do_shell(self, line):
         output = os.popen(line).read()
         print output
