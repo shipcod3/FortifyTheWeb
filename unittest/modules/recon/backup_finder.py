@@ -7,7 +7,7 @@ import urllib2, re
 from urllib2 import URLError
 
 host = sys.argv[1]
-payload = open("payloads.txt")
+payload = open("../../../../payloads.txt")
 
 for backup_files in payload.readlines():
     
