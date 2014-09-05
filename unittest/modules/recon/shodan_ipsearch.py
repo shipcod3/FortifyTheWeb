@@ -4,6 +4,7 @@
 
 import shodan
 import time 
+import sys
 
 def shodan_hostlookup():
     #api config here: account.shodan.io
