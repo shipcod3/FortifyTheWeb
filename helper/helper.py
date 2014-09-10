@@ -12,7 +12,7 @@ def showmods():
  print ' modules/recon/httpheaderanalyzer            httphacker               Checks for vulnerability on http header response'
  print ' modules/recon/subdomainfinder               shipcode                 Harvest domain from the target'
  print ' modules/vulnerability/dnsmisconfig          shipcode                 Check if target is vulnerable to DNS misconfiguration'
- print ' modules/discovery/vhostfinder               medz                     Enumerates vhosts on specified target'
+ print ' modules/discovery/vhostfinder               m1xr4t                   Enumerates vhosts on specified target'
  print ' modules/recon/shodanlookup                  shipcode                 Shodan Host Lookup'
  print ' modules/recon/cmsdetector                   semprix                  Checks if the target is a using a specific CMS'
  print ' modules/vulnerability/heartbleedanalyzer    semprix                  Check the target if vulnerable to heartbleed attack'
@@ -32,8 +32,8 @@ def showsploits():
 
 def showcredits():
  print ""
- print "***********************"
- print " FortifyTheWeb Credits"
- print "***********************"
- print "semprix, httphacker, napz, shipcode, medz"
- print ""
+ print "semprix - Core developer for FortifyTheWeb"
+ print "httphacker - core developer and maintainer"
+ print "m1xr4t - core contributor"
+ print "shipcode - core contributor"
+ print "napz - contributor"
