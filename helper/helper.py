@@ -2,10 +2,6 @@
 # description: helper for show function
 # author: @semprix
 
-def showhelp():
- print "Available commands:"
- print "show, run,, exploit, search"
-
 def showmods():
  print ""
  print "FortifyTheWeb Modules"
