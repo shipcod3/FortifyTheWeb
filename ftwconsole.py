@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Fortify The Web framework
 # Web application security testing framework
 # ______         _   _  __    _______ _       __          __  _     
@@ -54,22 +55,17 @@ class FortifyTheWebCore(cmd.Cmd):
     intro = 'Type show help or show ? to list commands.\n'
     prompt = 'fortifytheweb >'
 
-    # Greeter
-    def do_greet(self, line):
-        greet()
-
     ftwmods = ['httpheaderanalyzer', 'subdomainlookup', 'dnsmisconfig']
 
     # Show commands
     def do_show(self, showopt):
+        """\n* Show command will list down all available modules and exploits, format: show <modules> <exploits>\n"""
         if showopt == 'modules':
             showmods()
         elif showopt == 'exploits':
             showsploits()
         elif showopt == 'credits':
             showcredits()
-        elif showopt == 'help':
-            showhelp()
         else:
             print ""
             print "Show options:"
@@ -77,10 +73,12 @@ class FortifyTheWebCore(cmd.Cmd):
     
     # Search function
     def do_search(self, searchopt):
+        """\n* Search within the FortifyTheWeb Core, format: search <string>\n"""
         print "Search function"
 
     # FortifyTheWeb Modules
     def do_run(self, runopt):
+        """\n* Run command will execute the specified module, format: run <module_name>\n"""
         if runopt == 'modules/recon/httpheaderanalyzer':
             httpheaderanalyzer()
         elif runopt == 'modules/recon/subdomainfinder':
@@ -106,17 +104,20 @@ class FortifyTheWebCore(cmd.Cmd):
     
     # FortifyTheWeb Exploits
     def do_exploit(self,exploitopt):
+        """\n* Exploit command will execute the specified exploit, format: exploit <exploit_name>\n"""
         if exploitopt == 'modules/exploits/whmcs':
             whmcs()
         else:
             print "[!!!] No exploit(s) found by that name (this could be a typo)."
 
     def do_shell(self, line):
+        """\n* Shell command will allow you to issue a FTWCore external command, format: shell <command>\n"""
         output = os.popen(line).read()
         print output
         self.last_output = output
 
     def do_quit(self,*args):
+        """\n* Quit command will shutdown the application cleanly, format: quit\n"""
         print '[!!!] Shutting down......'
         time.sleep(3)
         print '[!!!] Good bye......'
