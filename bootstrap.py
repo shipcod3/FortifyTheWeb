@@ -4,7 +4,7 @@
 
 import sys, os, time, ConfigParser, platform
 
-ftwmods =['socket','bs4','requests','termcolor','ping', 'ConfigParser']
+ftwmods =['socket','bs4','requests','termcolor','ping', 'ConfigParser, tld, shodan']
 
 # define your ftw directory installation
 config = ConfigParser.ConfigParser()
