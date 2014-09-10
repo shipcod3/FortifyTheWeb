@@ -38,6 +38,8 @@ from greeter import *
 from httpheaderanalyzer import *
 from subdomainfinder import *
 from dnsmisconfig import *
+from vhostfinder import *
+from shodanlookup import *
 
 # Load exploits
 from whmcs import *
@@ -79,12 +81,16 @@ class FortifyTheWebCore(cmd.Cmd):
 
     # FortifyTheWeb Modules
     def do_run(self, runopt):
-        if runopt == 'httpheaderanalyzer':
+        if runopt == 'modules/recon/httpheaderanalyzer':
             httpheaderanalyzer()
-        elif runopt == 'subdomainfinder':
+        elif runopt == 'modules/recon/subdomainfinder':
             subdomainfinder()
-        elif runopt == 'dnsmisconfig':
+        elif runopt == 'modules/vulnerability/dnsmisconfig':
             dnsmisconfig()
+        elif runopt == 'modules/discovery/vhostfinder':
+            vhostfinder()
+        elif runopt == 'modules/recon/shodanlookup':
+            shodanlookup()
         else:
             print "[!!!] No module(s) found by that name (this could be a typo)."
 
@@ -100,7 +106,7 @@ class FortifyTheWebCore(cmd.Cmd):
     
     # FortifyTheWeb Exploits
     def do_exploit(self,exploitopt):
-        if exploitopt == 'whmcs':
+        if exploitopt == 'modules/exploits/whmcs':
             whmcs()
         else:
             print "[!!!] No exploit(s) found by that name (this could be a typo)."
