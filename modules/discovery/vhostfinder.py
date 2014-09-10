@@ -1,6 +1,6 @@
 # vhostfinder.py
 # description: vhost enumeration module for FTW
-# author: @medz
+# author: @m1xr4t
 
 import time, urllib, urllib2, json, re, socket, tld, os
 
