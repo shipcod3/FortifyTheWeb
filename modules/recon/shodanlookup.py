@@ -2,9 +2,7 @@
 # description: looks up the host using Shodan's API
 # author: @shipcod3
 
-import shodan
-import time 
-import sys
+import shodan, time, sys
 
 def shodanlookup():
     #api config here: account.shodan.io
@@ -31,6 +29,8 @@ def shodanlookup():
         for item in host['data']:
             print "[!] Port: {}".format(item['port'])
             print "{}".format(item['data'])
+        print'[####] Done!!!'
+        print ''
     except Exception, e:
         print '[!!!!] Error: %s' % e
         sys.exit(1)     

@@ -27,10 +27,13 @@ def shodanlookup():
         print ''
         print "[***] Printing available port(s)"
         print ''
+
         time.sleep(1)
         for item in host['data']:
             print "[!] Port: {}".format(item['port'])
             print "{}".format(item['data'])
+            print '[####] Done!!!'
+
     except Exception, e:
         print '[!!!!] Error: %s' % e
         sys.exit(1)     

@@ -116,6 +116,12 @@ class FortifyTheWebCore(cmd.Cmd):
         print output
         self.last_output = output
 
+    def do_quit(self,*args):
+        print '[!!!] Shutting down......'
+        time.sleep(3)
+        print '[!!!] Good bye......'
+        return True    
+
     def do_EOF(self, line):
         return True
     

@@ -2,14 +2,8 @@
 # description: vhost enumeration module for FTW
 # author: @medz
 
-import time
-import urllib
-import urllib2
-import json
-import re
-import socket
-import tld
-import os
+import time, urllib, urllib2, json, re, socket, tld, os
+
 from tld import get_tld
 from tld.utils import update_tld_names
 
@@ -23,11 +17,13 @@ def vhostfinder():
         print '\n'
         ip=socket.gethostbyname(domain)
         query = "ip:"+ip+""
-        print '[****] Starting vhost finder...... [****]'
+        print '[****] Starting vhost finder......'
         time.sleep (3)
         print ''
         print '['+domain+'] resolves to: ['+ip+']'
-        print bing_search(query, 'Web')         
+        print bing_search(query, 'Web')
+        print'[####] Done!!!'
+        print ''         
     except:
         print '[!!!!] Error unable to obtain IP of the domain',domain 
         
@@ -61,11 +57,8 @@ def bing_search(query, search_type):
                 parsed_uri = urlparse(aaaa)
                 #domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
                 domain = '{uri.netloc}'.format(uri=parsed_uri)
-                print [x+1],domain
-
-    
+                print [x+1],domain    
     except:
-        #print 'found: ' 
         return ''
           
 #    try:
