@@ -4,9 +4,7 @@
 
 import sys, requests, time, os
 
-sys.path.append(r'auxiliary')
 from bs4 import BeautifulSoup 
-from colors import *
 
 def urlcrawler():
     print ""
