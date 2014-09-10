@@ -32,8 +32,11 @@ def showsploits():
 
 def showcredits():
  print ""
+ print "********************************************"
+ print "FortifyTheWeb Developers and Contributors"
+ print "********************************************\n"
  print "semprix - Core developer for FortifyTheWeb"
  print "httphacker - core developer and maintainer"
  print "m1xr4t - core contributor"
  print "shipcode - core contributor"
- print "napz - contributor"
+ print "napz - contributor\n"
