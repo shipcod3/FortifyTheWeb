@@ -7,6 +7,7 @@ wp-config.php.conf
 wp-config.php.old
 wp-config.txt 
 wp-config.php~
+wp-config.php.orig
 config.php-
 config.php.bak
 config.php.save
@@ -16,6 +17,7 @@ config.php.conf
 config.php.old
 config.txt
 config.php~
+config.php.orig
 configuration.php-
 configuration.php.bak
 configuration.php.save
@@ -25,6 +27,7 @@ configuration.php.conf
 configuration.php.old
 configuration.txt
 configuration.php~
+configuration.php.orig
 LocalSettings.php-
 LocalSettings.php.bak
 LocalSettings.php.save
@@ -34,6 +37,7 @@ LocalSettings.php.conf
 LocalSettings.php.old
 LocalSettings.txt
 LocalSettings.php~
+LocalSettings.php.orig
 mt-config.cgi-
 mt-config.cgi.bak
 mt-config.cgi.save
@@ -43,6 +47,7 @@ mt-config.cgi.conf
 mt-config.cgi.old
 mt-config.txt
 mt-config.cgi~
+mt-config.cgi.orig
 settings.php-
 settings.php.bak
 settings.php.save
@@ -53,6 +58,7 @@ settings.php.old
 settings.txt
 settings.cgi~
 settings.php~
+settings.php.orig
 setup.php-
 setup.php.bak
 setup.php.save
@@ -62,3 +68,4 @@ setup.php.conf
 setup.php.old
 setup.txt
 setup.php~             
+setup.php.orig
